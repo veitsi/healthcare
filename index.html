@@ -44,10 +44,166 @@
             <div class="overlay__close"></div>
         </div>
 
-        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="200" frameborder="0" style="border:0"></iframe>
+        <div id="map" width="100%" height="200" frameborder="0" style="border:0"></div>
     </main>
 </div>
+
 <script>
+    function initMap() {
+        var startLat = 50.4501,
+            startLng = 30.5234,
+            myLatLng = { lat: startLat, lng: startLng };
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: myLatLng
+        });
+
+        icon1 = new google.maps.Marker({
+          position: {lat: 50.401252, lng: 30.622581}, map: map,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+        });
+        
+        icon2 = new google.maps.Marker({
+          position: {lat: 50.3966377, lng: 30.65282}, map: map,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+        });
+        icon3 = new google.maps.Marker({
+          position: {lat: 50.417302, lng: 30.655846}, map: map,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+        });
+        
+        setTimeout(function() {
+          icon4 = new google.maps.Marker({
+            position: {lat: 50.425221, lng: 30.596129}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon5 = new google.maps.Marker({
+            position: {lat: 50.436306, lng: 30.620001}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }, 3000);
+
+        setTimeout(function() {
+          icon6 = new google.maps.Marker({
+            position: {lat: 50.439227, lng: 30.598268}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon7 = new google.maps.Marker({
+            position: {lat: 50.458509, lng: 30.628099}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }, 6000);
+
+        setTimeout(function() {
+          icon8 = new google.maps.Marker({
+            position: {lat: 50.46, lng: 30.53}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon9 = new google.maps.Marker({
+            position: {lat:50.488897, lng: 30.596841}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon10 = new google.maps.Marker({
+            position: {lat: 50.523993, lng: 30.61274}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }, 9000);
+
+        setTimeout(function() {
+          icon11 = new google.maps.Marker({
+            position: {lat: 50.494349, lng: 30.457457}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon12 = new google.maps.Marker({
+            position: {lat:50.467531, lng:30.516938}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon13 = new google.maps.Marker({
+            position: {lat:50.461078, lng:30.523389}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }, 10000);
+
+        setTimeout(function() {
+          icon14 = new google.maps.Marker({
+            position: {lat: 50.450382, lng:30.523847}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon15 = new google.maps.Marker({
+            position: {lat:50.430451, lng:30.545077}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon16 = new google.maps.Marker({
+            position: {lat:50.416195, lng:30.545238}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }, 7000);
+
+        setTimeout(function() {
+          icon17 = new google.maps.Marker({
+            position: {lat: 50.40189, lng:30.507962}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon18 = new google.maps.Marker({
+            position: {lat:50.379956, lng:30.471077}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon19 = new google.maps.Marker({
+            position: {lat:50.421200, lng:30.454721}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+
+          setInterval(function() {
+            icon1.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'});
+            icon2.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon18.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon19.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon7.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+          }, 1000);
+
+          setInterval(function() {
+            icon1.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+            icon2.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+            icon18.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+            icon11.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'});
+            icon14.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'});
+            icon19.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'});
+            icon7.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+          }, 5000);
+
+          setInterval(function() {
+            icon3.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'});
+            icon4.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon11.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon12.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon13.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon14.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+          }, 1000);
+
+          setInterval(function() {
+            icon3.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon4.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+            icon11.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+            icon12.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/none-dot.png'});
+            icon13.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/reed-dot.png'});
+          }, 3000);
+        }, 11000);
+
+        setInterval(function() {
+          icon1.setMap(null);
+          icon12.setMap(null);
+          icon4.setMap(null);
+        }, 6000);
+
+        setInterval(function() {
+          icon1.setMap(map);
+          icon12.setMap(map);
+          icon4.setMap(map);
+        }, 1000);
+
+
+      }
     $().ready(function() {
         $('#about_trigger').on('click', function() {
             $('#about').slideDown();
@@ -69,8 +225,173 @@
 
         $(window).on('resize', function() {
             $('#map').height(windowHeight - 130);
-        })
-    })
+        });
+
+    });
+
+    function initMap() {
+        /*
+
+            Map module emulation
+
+        */
+        var startLat = 50.4501,
+            startLng = 30.5234,
+            myLatLng = { lat: startLat, lng: startLng };
+        var icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9,
+            icon10, icon11, icon13, icon14, icon15, icon16, icon17, 
+            icon18, icon19, icon12;
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: myLatLng
+        });
+
+        icon1 = new google.maps.Marker({
+          position: {lat: 50.401252, lng: 30.622581}, map: map,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+        });
+        
+        icon2 = new google.maps.Marker({
+          position: {lat: 50.3966377, lng: 30.65282}, map: map,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+        });
+        icon3 = new google.maps.Marker({
+          position: {lat: 50.417302, lng: 30.655846}, map: map,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+        });
+        
+        setTimeout(function() {
+          icon4 = new google.maps.Marker({
+            position: {lat: 50.425221, lng: 30.596129}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon5 = new google.maps.Marker({
+            position: {lat: 50.436306, lng: 30.620001}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }, 3000);
+
+        setTimeout(function() {
+          icon6 = new google.maps.Marker({
+            position: {lat: 50.439227, lng: 30.598268}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon7 = new google.maps.Marker({
+            position: {lat: 50.458509, lng: 30.628099}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }, 6000);
+
+        setTimeout(function() {
+          icon8 = new google.maps.Marker({
+            position: {lat: 50.46, lng: 30.53}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon9 = new google.maps.Marker({
+            position: {lat:50.488897, lng: 30.596841}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon10 = new google.maps.Marker({
+            position: {lat: 50.523993, lng: 30.61274}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }, 9000);
+
+        setTimeout(function() {
+          icon11 = new google.maps.Marker({
+            position: {lat: 50.494349, lng: 30.457457}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon12 = new google.maps.Marker({
+            position: {lat:50.467531, lng:30.516938}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon13 = new google.maps.Marker({
+            position: {lat:50.461078, lng:30.523389}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }, 10000);
+
+        setTimeout(function() {
+          icon14 = new google.maps.Marker({
+            position: {lat: 50.450382, lng:30.523847}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon15 = new google.maps.Marker({
+            position: {lat:50.430451, lng:30.545077}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon16 = new google.maps.Marker({
+            position: {lat:50.416195, lng:30.545238}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }, 7000);
+
+        setTimeout(function() {
+          icon17 = new google.maps.Marker({
+            position: {lat: 50.40189, lng:30.507962}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon18 = new google.maps.Marker({
+            position: {lat:50.379956, lng:30.471077}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+          icon19 = new google.maps.Marker({
+            position: {lat:50.421200, lng:30.454721}, map: map,
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+
+          setInterval(function() {
+            icon1.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'});
+            icon2.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon18.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon19.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon7.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+          }, 1000);
+
+          setInterval(function() {
+            icon1.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+            icon2.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+            icon18.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+            icon11.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'});
+            icon14.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'});
+            icon19.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'});
+            icon7.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+          }, 5000);
+
+          setInterval(function() {
+            icon3.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'});
+            icon4.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon11.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon12.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon13.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon14.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+          }, 1000);
+
+          setInterval(function() {
+            icon3.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'});
+            icon4.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+            icon11.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+            icon12.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/none-dot.png'});
+            icon13.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/reed-dot.png'});
+          }, 3000);
+        }, 11000);
+
+        setInterval(function() {
+          icon1.setMap(null);
+          icon12.setMap(null);
+          icon4.setMap(null);
+        }, 6000);
+
+        setInterval(function() {
+          icon1.setMap(map);
+          icon12.setMap(map);
+          icon4.setMap(map);
+        }, 1000);
+      }
 </script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuVEcnPJW6cBheq3J2-OacchsJZdccZfo&signed_in=true&callback=initMap"></script>
 </body>
 </html>
