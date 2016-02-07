@@ -1,0 +1,45 @@
+.parameters-bar {
+  padding: 20px;
+  background-color: fadeout(black, 50%);
+  color: white;
+
+  @media all and (max-width: 480px) {
+    display: block;
+    padding: 6px 20px;
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &-item {
+    display: inline-block;
+    font-size: 18px;
+
+    @media all and (max-width: 480px) {
+      display: block;
+    }
+
+    & + & {
+      margin-left: 40px;
+
+      @media all and (max-width: 480px) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__checkbox {
+
+    &:checked {
+    }
+  }
+
+  &__label {}
+
+  &__checkbox + &__label {
+    margin-left: 5px;
+  }
+}

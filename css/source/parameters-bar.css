@@ -1,0 +1,36 @@
+.parameters-bar {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+@media all and (max-width: 480px) {
+  .parameters-bar {
+    display: block;
+    padding: 6px 20px;
+  }
+}
+.parameters-bar-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.parameters-bar-item {
+  display: inline-block;
+  font-size: 18px;
+}
+@media all and (max-width: 480px) {
+  .parameters-bar-item {
+    display: block;
+  }
+}
+.parameters-bar-item + .parameters-bar-item {
+  margin-left: 40px;
+}
+@media all and (max-width: 480px) {
+  .parameters-bar-item + .parameters-bar-item {
+    margin: 0;
+  }
+}
+.parameters-bar__checkbox + .parameters-bar__label {
+  margin-left: 5px;
+}

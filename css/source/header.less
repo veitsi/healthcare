@@ -1,0 +1,56 @@
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 999;
+  background-color: #4285f4;
+
+  &-title {
+    display: inline-block;
+    font-size: 36px;
+    color: #ffffff;
+
+    @media all and (max-width: 480px) {
+      font-size: 24px;
+    }
+  }
+
+  &-nav {
+    float: right;
+    margin-top: 8px;
+
+    @media all and (max-width: 480px) {
+      margin-top: 5px;
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__item {
+      display: inline-block;
+      font-size: 24px;
+      color: #f8f8f8;
+      cursor: pointer;
+
+      @media all and (max-width: 480px) {
+        font-size: 18px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      & + & {
+        margin-left: 20px;
+
+        @media all and (max-width: 480px) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
